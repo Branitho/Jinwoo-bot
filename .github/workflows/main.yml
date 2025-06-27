@@ -1,0 +1,30 @@
+name: Node.js CI
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # Run every 6 hours (UTC)
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 360     # Max runtime per job: 6 hours
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start application
+      run: npm start

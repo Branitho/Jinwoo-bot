@@ -17,7 +17,7 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 
 //--------------------[ SESSION ID ]----------------------//
 
-global.SESSION_ID = process.env.SESSION_ID || '' 
+global.SESSION_ID = process.env.SESSION_ID || 'jinwoo:~IjEGgKST#VxLtDidFh8hrCduupGDpdhDExRJ8hBk2aoW6ALE5KO8' 
 //Enter your Jinwoo session id here; must start with jinwoo:~
 
 //--------------------[ BOT NAME ]----------------------//
@@ -30,7 +30,7 @@ global.ownernumber = process.env.OWNER_NUMBER || '263780166288'
 
 //--------------------[ SUDO ]--------------------------//
 
-global.sudo = process.env.SUDO ? process.env.SUDO.split(',') : ['263714757857', '263780934873'];
+global.sudo = process.env.SUDO ? process.env.SUDO.split(',') : ['254718518029'];
 // Type additional allowed users here
 //NB: They'll be able to use every functions of the bot without restrictions.
 
@@ -52,7 +52,7 @@ global.prefixz = process.env.BOT_PREFIX || '.'
 
 //-----------------[ BOT'S MODE ]-----------------------//
 
-global.mode = process.env.MODE || 'public';
+global.mode = process.env.MODE || 'private';
 // Set 'private' to enable private mode
 // Set 'public' to enable public mode
 // Set 'group' to enable only group
@@ -93,7 +93,7 @@ global.antidelete = process.env.ANTIDELETE || 'private'
 
 //---------------------[ ANTI EDIT ]----------------------//
 
-global.antiedit = process.env.ANTI_EDIT || 'private'
+global.antiedit = process.env.ANTI_EDIT || 'chat'
 // options:- 'private', 'chat' or 'off'
 // private = Sends to message yourself 
 // chat = sends to the current chat 
@@ -119,7 +119,7 @@ global.timezones = process.env.TIMEZONE || "Africa/Nairobi"
 
 //--------------------[ AUTO READ ]--------------------//
 
-global.autoread = process.env.AUTO_READ || 'false';
+global.autoread = process.env.AUTO_READ || 'true';
 // Set to 'true' to enable automatic reading of messages
 
 //-------------------[ MENU STYLE ]--------------------//
